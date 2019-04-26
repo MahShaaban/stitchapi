@@ -5,7 +5,7 @@
 \title{Get actions request}
 \usage{
 get_actions(identifier = NULL, limit = 5, required_score,
-  additional_network_nodes, db = "string")
+  additional_network_nodes, db = "stitch")
 }
 \arguments{
 \item{identifier}{A \code{character} vector.}
@@ -16,8 +16,8 @@ get_actions(identifier = NULL, limit = 5, required_score,
 
 \item{additional_network_nodes}{A \code{numeric}}
 
-\item{db}{A \code{character} string. Possible values are 'string' (default)
-or 'stitch'.}
+\item{db}{A \code{character} string. Possible values are 'stitch' (default)
+or 'string'.}
 }
 \value{
 A \code{tibble}.

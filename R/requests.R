@@ -4,8 +4,8 @@
 #' @param species A \code{numeric}.
 #' @param format A \code{character} string. Possible values are 'only-ids'
 #' (default) or 'full'.
-#' @param db A \code{character} string. Possible values are 'string' (default)
-#' or 'stitch'.
+#' @param db A \code{character} string. Possible values are 'stitch' (default)
+#' or 'string'.
 #'
 #' @return A \code{tibble}.
 #'
@@ -17,7 +17,7 @@
 #'
 #' @export
 get_resolve <- function(identifier = NULL, species = 9606, format = 'only-ids',
-                        db = 'string') {
+                        db = 'stitch') {
   # decide request type
   if(length(identifier) > 1) {
     request <- 'resolveList'
@@ -33,7 +33,7 @@ get_resolve <- function(identifier = NULL, species = 9606, format = 'only-ids',
 
   # construct hostname
   if(missing(db)) {
-    db <- 'string'
+    db <- 'stitch'
   }
   database <- build_hostname(db)
 
@@ -69,7 +69,7 @@ get_resolve <- function(identifier = NULL, species = 9606, format = 'only-ids',
 #'
 #' @export
 get_abstracts <- function(identifier = NULL, limit = 5, format = 'pmid',
-                          db = 'string') {
+                          db = 'stitch') {
   # decide request type
   if(length(identifier) > 1) {
     request <- 'abstractsList'
@@ -85,7 +85,7 @@ get_abstracts <- function(identifier = NULL, limit = 5, format = 'pmid',
 
   # construct hostname
   if(missing(db)) {
-    db <- 'string'
+    db <- 'stitch'
   }
   database <- build_hostname(db)
 
@@ -121,7 +121,7 @@ get_abstracts <- function(identifier = NULL, limit = 5, format = 'pmid',
 #'
 #' @export
 get_actions <- function(identifier = NULL, limit = 5, required_score,
-                        additional_network_nodes, db = 'string') {
+                        additional_network_nodes, db = 'stitch') {
   # decide request type
   if(length(identifier) > 1) {
     request <- 'actionsList'
@@ -138,7 +138,7 @@ get_actions <- function(identifier = NULL, limit = 5, required_score,
 
   # construct hostname
   if(missing(db)) {
-    db <- 'string'
+    db <- 'stitch'
   }
   database <- build_hostname(db)
 
@@ -173,7 +173,7 @@ get_actions <- function(identifier = NULL, limit = 5, required_score,
 #'
 #' @export
 get_interactors <- function(identifier = NULL, limit = 5, required_score,
-                            additional_network_nodes, db = 'string') {
+                            additional_network_nodes, db = 'stitch') {
   # decide request type
   if(length(identifier) > 1) {
     request <- 'interactorsList'
@@ -190,7 +190,7 @@ get_interactors <- function(identifier = NULL, limit = 5, required_score,
 
   # construct hostname
   if(missing(db)) {
-    db <- 'string'
+    db <- 'stitch'
   }
   database <- build_hostname(db)
 
@@ -225,7 +225,7 @@ get_interactors <- function(identifier = NULL, limit = 5, required_score,
 #'
 #' @export
 get_interactions <- function(identifier = NULL, limit = 5, required_score,
-                             additional_network_nodes, db = 'string') {
+                             additional_network_nodes, db = 'stitch') {
   # decide request type
   if(length(identifier) > 1) {
     request <- 'interactionsList'
@@ -242,7 +242,7 @@ get_interactions <- function(identifier = NULL, limit = 5, required_score,
 
   # construct hostname
   if(missing(db)) {
-    db <- 'string'
+    db <- 'stitch'
   }
   database <- build_hostname(db)
 

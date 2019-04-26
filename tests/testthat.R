@@ -1,4 +1,4 @@
 library(testthat)
-library(stringapi)
+library(stitchapi)
 
-test_check("stringapi")
+test_check("stitchapi")

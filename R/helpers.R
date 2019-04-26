@@ -3,9 +3,9 @@
 #' Make a valid URL for the STRING API request. The functions translates STRING
 #' required URL fields into \code{modify_url} arguments.
 #'
-#' @param database A \code{character}. Possible values are 'string-db.org'
-#' (default) or 'string.embl.de' for the STRING database or 'stitch.embl.de'
-#' for the STITCH sister database.
+#' @param database A \code{character}. Possible values are 'stitch.embl.de'
+#' (default) for the STITCH database or 'string-db.org' and 'string.embl.de' 
+#' for the STRING mother database.
 #' @param access A \code{character}. Possible values are 'api' (default) or
 #' services (not used).
 #' @param format A \code{character}. Only 'tsv' is used.
@@ -26,7 +26,7 @@
 #' @importFrom httr modify_url
 #'
 #' @export
-make_url <- function(database = 'string-db.org', access = 'api', format = 'tsv',
+make_url <- function(database = 'stitch.embl.de', access = 'api', format = 'tsv',
                      request = 'resolve', parameters = NULL) {
   # check database host name
   databases <- c('string-db.org', 'string.embl.de', 'stitch.embl.de')
@@ -119,12 +119,16 @@ send_request <- function(url) {
 #' @return A \code{tibble}.
 #'
 #' @examples
-#' # load example response object
-#' fl <- system.file('extdata', 'resp.rda', package = 'stringapi')
-#' load(fl)
+#' \dontrun{
+#' # make a resolve request for ADD
+#' url <- make_url(parameters = list(identifier = 'ADD'))
 #'
+#' # send request
+#' send_request(url)
+#' 
 #' # format content
 #' format_content(resp)
+#' }
 #'
 #' @importFrom httr parse_url has_content content
 #' @importFrom readr read_tsv

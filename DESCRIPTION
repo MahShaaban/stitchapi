@@ -1,16 +1,17 @@
-Package: stringapi
+Package: stitchapi
 Type: Package
-Title: An R client for STRING API
+Title: An R client for STITCH API (STRING v10)
 Version: 0.1.0
 License: GPL-3
 Authors@R: person("Mahmoud", "Ahmed",
   email = "mahmoud.s.fahmy@students.kasralainy.edu.eg",
   role = c("aut", "cre"))
-URL: https://github.com/MahShaaban/stringapi
-BugReports: https://github.com/MahShaaban/stringapi/issues
-Description: Provide a set of functions to interact with the STRING API in R.
-  The functions are organized a round the API database and request types. The
-  query parameters are checked and the output is returned in a tibble.
+URL: https://github.com/MahShaaban/stitchapi
+BugReports: https://github.com/MahShaaban/stitchapi/issues
+Description: Provide a set of functions to interact with the STITCH API 
+  (STRING v10) in R. The functions are organized a round the API request
+  types. The query parameters are checked and the output is returned in 
+  a tibble.
 Encoding: UTF-8
 LazyData: true
 Imports: httr,

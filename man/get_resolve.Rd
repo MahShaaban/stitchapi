@@ -5,7 +5,7 @@
 \title{Get a resolve request}
 \usage{
 get_resolve(identifier = NULL, species = 9606, format = "only-ids",
-  db = "string")
+  db = "stitch")
 }
 \arguments{
 \item{identifier}{A \code{character} vector.}
@@ -15,8 +15,8 @@ get_resolve(identifier = NULL, species = 9606, format = "only-ids",
 \item{format}{A \code{character} string. Possible values are 'only-ids'
 (default) or 'full'.}
 
-\item{db}{A \code{character} string. Possible values are 'string' (default)
-or 'stitch'.}
+\item{db}{A \code{character} string. Possible values are 'stitch' (default)
+or 'string'.}
 }
 \value{
 A \code{tibble}.

@@ -4,13 +4,13 @@
 \alias{make_url}
 \title{Make a URL}
 \usage{
-make_url(database = "string-db.org", access = "api", format = "tsv",
+make_url(database = "stitch.embl.de", access = "api", format = "tsv",
   request = "resolve", parameters = NULL)
 }
 \arguments{
-\item{database}{A \code{character}. Possible values are 'string-db.org'
-(default) or 'string.embl.de' for the STRING database or 'stitch.embl.de'
-for the STITCH sister database.}
+\item{database}{A \code{character}. Possible values are 'stitch.embl.de'
+(default) for the STITCH database or 'string-db.org' and 'string.embl.de' 
+for the STRING mother database.}
 
 \item{access}{A \code{character}. Possible values are 'api' (default) or
 services (not used).}

@@ -5,7 +5,7 @@
 \title{Get abstracts request}
 \usage{
 get_abstracts(identifier = NULL, limit = 5, format = "pmid",
-  db = "string")
+  db = "stitch")
 }
 \arguments{
 \item{identifier}{A \code{character} vector.}
@@ -15,8 +15,8 @@ get_abstracts(identifier = NULL, limit = 5, format = "pmid",
 \item{format}{A \code{character} string. Possible values are 'pmid'
 (default) or 'colon'.}
 
-\item{db}{A \code{character} string. Possible values are 'string' (default)
-or 'stitch'.}
+\item{db}{A \code{character} string. Possible values are 'stitch' (default)
+or 'string'.}
 }
 \value{
 A \code{tibble}.

@@ -18,11 +18,15 @@ A \code{tibble}.
 Capture the API response in text format then reformat into tibble.
 }
 \examples{
-# load example response object
-fl <- system.file('extdata', 'resp.rda', package = 'stringapi')
-load(fl)
+\dontrun{
+# make a resolve request for ADD
+url <- make_url(parameters = list(identifier = 'ADD'))
+
+# send request
+send_request(url)
 
 # format content
 format_content(resp)
+}
 
 }
