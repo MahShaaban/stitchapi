@@ -39,8 +39,8 @@ get_resolve(identifier = 'ADD',
 ## Acknowledgement
 
 * This implementation is based on the STRING/STITCH API documentation, [here](http://stitch.embl.de/cgi/help.pl?UserId=qZfIPe69o9b4&sessionId=9MtGdB15CK8v).
-* **Best practices for API packages** guide was a very useful resource,[here](https://cran.r-project.org/web/packages/httr/vignettes/api-packages.html)
+* **Best practices for API packages** guide was a very useful resource, [here](https://cran.r-project.org/web/packages/httr/vignettes/api-packages.html)
 
-**Note**: STITCH was built on top of STRING database and can only be accessed 
+**Note**: STITCH was built on top of the STRING database and can only be accessed 
 using v10 of its API. This API can only access the old STRING data, for a newer
-verions check, [here](https://github.com/MahShaaban/stringapi).
+version check, [here](https://github.com/MahShaaban/stringapi).
